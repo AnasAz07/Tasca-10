@@ -10,7 +10,6 @@ def menu_principal():
         return x
     else:
         return 0
-
 #Programa Principal
 a = menu_principal
 print(a)
