@@ -6,7 +6,7 @@ def menu_principal():
           3. Sortir
           """)
     x = int(input("Elegeix una opció"))
-    if x>0 and x<4
+    if x>0 and x<4:
         return x
     else:
         return 0
