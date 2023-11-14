@@ -3,7 +3,8 @@ def menu_principal():
           Menú Principal:
           1. Calculadora de Nombres Enters
           2. Calculadora de Nombres Reals
-          3. Sortir
+          3. Canvi de Base
+          4. Sortir
     
     """)
     a = int(input("Elegeix una opció: "))
@@ -92,32 +93,93 @@ def canvi_base():
         match op:
             case 1: # Binari to
                 b = input("Introdueix el número binari: ")
-                o = bintooct(b)
-                d = bintodec(b)
-                h = bintohex(b)
+                o = bin_to_oct(b)
+                d = bin_to_dec(b)
+                h = bin_to_hex(b)
                 print("El número binari {} és: \n oct -> {} \n dec -> {} \n hex -> {}".format(b,o,d,h))
             case 2: # Octal to
                 o = input("Introdueix el nombre octal: ")
-                b = octtobin(o)
-                d = octtodec(o)
-                h = octtohex(o)
+                b = oct_to_bin(o)
+                d = oct_to_dec(o)
+                h = oct_to_hex(o)
                 print("El número binari {} és: \n bin -> {} \n dec -> {} \n hex -> {}".format(o,b,d,h))
             case 3: # Decimal to
                 d = input("Introdueix el nombre decimal: ")
-                b = dectobin(d)
-                o = dectooct(d)
-                h = dectohex(d)
+                b = dec_to_bin(d)
+                o = dec_to_oct(d)
+                h = dec_to_hex(d)
                 print("El número binari {} és: \n bin -> {} \n oct -> {} \n hex -> {}".format(d,b,o,h))
             case 4: # Hexadecimal to
                 h = input("Introdueix el nombre hexadecimal: ")
-                b = hextobin(h)
-                o = hextooct(h)
-                d = hextodec(h)
+                b = hex_to_bin(h)
+                o = hex_to_oct(h)
+                d = hex_to_dec(h)
                 print("El número binari {} és: \n bin -> {} \n oct -> {} \n dec -> {}".format(h,b,o,d))
             case 5: # Sortir
                 print("Ara tornaràs al menu principal de canvi de base")
                 op = -1
 
+# Definicions Binari to
+
+def bin_to_oct(binary_num):
+    decimal_num = int(binary_num, 2)
+    octal_num = oct(decimal_num)
+    return octal_num
+
+def bin_to_dec(binary_num):
+    decimal_num = int(binary_num, 2)
+    return decimal_num
+
+def bin_to_hex(binary_num):
+    decimal_num = int(binary_num, 2)
+    hex_num = hex(decimal_num)
+    return hex_num[2:]
+
+# Definicions Octal to
+
+def oct_to_bin(octal_num):
+    decimal_num = int(octal_num, 8)
+    binary_num = bin(decimal_num)
+    return binary_num[2:]
+
+def oct_to_dec(octal_num):
+    decimal_num = int(octal_num, 8)
+    return decimal_num
+
+def oct_to_hex(octal_num):
+    decimal_num = int(octal_num, 8)
+    hex_num = hex(decimal_num)
+    return hex_num[2:]
+
+# Definicions Decimal to
+
+def dec_to_bin(decimal_num):
+    binary_num = bin(int(decimal_num))
+    return binary_num[2:]
+
+def dec_to_oct(decimal_num):
+    octal_num = oct(int(decimal_num))
+    return octal_num[2:]
+
+def dec_to_hex(decimal_num):
+    hex_num = hex(int(decimal_num))
+    return hex_num[2:]
+
+# Definicions Hexadecimal to
+
+def hex_to_bin(hex_num):
+    decimal_num = int(hex_num, 16)
+    binary_num = bin(decimal_num)
+    return binary_num[2:]
+
+def hex_to_oct(hex_num):
+    decimal_num = int(hex_num, 16)
+    octal_num = oct(decimal_num)
+    return octal_num[2:]
+
+def hex_to_dec(hex_num):
+    decimal_num = int(hex_num, 16)
+    return decimal_num
 #Programa Principal
 
 a = 1
