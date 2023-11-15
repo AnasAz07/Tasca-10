@@ -180,6 +180,7 @@ def hex_to_oct(hex_num):
 def hex_to_dec(hex_num):
     decimal_num = int(hex_num, 16)
     return decimal_num
+
 #Programa Principal
 
 a = 1
