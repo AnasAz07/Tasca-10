@@ -124,11 +124,11 @@ def canvi_base():
 def bin_to_oct(binary_num):
     decimal_num = int(binary_num, 2)
     octal_num = oct(decimal_num)
-    return octal_num
+    return octal_num[2:]
 
 def bin_to_dec(binary_num):
     decimal_num = int(binary_num, 2)
-    return decimal_num
+    return decimal_num[2:]
 
 def bin_to_hex(binary_num):
     decimal_num = int(binary_num, 2)
@@ -144,7 +144,7 @@ def oct_to_bin(octal_num):
 
 def oct_to_dec(octal_num):
     decimal_num = int(octal_num, 8)
-    return decimal_num
+    return decimal_num[2:]
 
 def oct_to_hex(octal_num):
     decimal_num = int(octal_num, 8)
@@ -179,7 +179,7 @@ def hex_to_oct(hex_num):
 
 def hex_to_dec(hex_num):
     decimal_num = int(hex_num, 16)
-    return decimal_num
+    return decimal_num[2:]
 
 #Programa Principal
 
