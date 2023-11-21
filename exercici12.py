@@ -39,7 +39,7 @@ def calculadora_enters ():
             case 4: # Dividir
                 x = int(input("Introdueix el primer nombre: "))
                 y = int(input("Introdueix el segon nombre: "))
-                print("{} / {} = {}".format(x, y, x/y))
+                print("{} / {} = {}".format(x, y, x//y))
             case 5: # Sortir
                 print("Ara tornaràs a la calculadora inicial \n\n")
                 op = -1
@@ -73,7 +73,7 @@ def calculadora_reals():
             case 4: # Dividir
                 x = float(input("Introdueix el primer nombre: "))
                 y = float(input("Introdueix el segon nombre: "))
-                print("{} // {} = {}".format(x, y, x // y))
+                print("{} // {} = {}".format(x, y, x/y))
             case 5: # Sortir
                 print("Ara tornaràs a la calculadora inicial \n\n")
                 op = -1
