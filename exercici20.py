@@ -4,8 +4,8 @@ def superposicio(x,y):
             return True
     return False
 
-x = input("Introdueix la primera llista separant cada caràcter per espais: ")
-y = input("Introdueix la segona llista separant cada caràcter per espais: ")
+x = input("Introdueix la primera llista: ")
+y = input("Introdueix la segona llista: ")
 
 if superposicio(x,y):
     print("Les llistes tenen elements en comú.")
