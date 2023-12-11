@@ -15,29 +15,28 @@ def comprovar_intent(codi, intent):
 
     return correctes, coincideixen
 
-def main():
-    print("Benvingut a MasterMind!")
-    print("Intenta endevinar el codi de 4 xifres.")
 
-    num_aleatori = generar_codi()
-    intents = 0
+#Programa Principal
+print("Benvingut a MasterMind!")
+print("Intenta endevinar el codi de 4 xifres.")
 
-    while True:
-        intento_usuario = input("Introdueix el teu intent (4 xifres): ")
+num_aleatori = generar_codi()
+intents = 0
+
+while True:
+    intento_usuario = input("Introdueix el teu intent (4 xifres): ")
         
-        if len(intento_usuario) != 4 or not intento_usuario.isdigit():
-            print("Si us plau, introdueix un intent amb 4 xifres vàlides.")
-            continue
+    if len(intento_usuario) != 4 or not intento_usuario.isdigit():
+        print("Si us plau, introdueix un intent amb 4 xifres vàlides.")
+        continue
 
-        intento_usuario = [int(digit) for digit in intento_usuario]
-        correctos, coinciden = comprovar_intent(num_aleatori, intento_usuario)
+    intento_usuario = [int(digit) for digit in intento_usuario]
+    correctos, coinciden = comprovar_intent(num_aleatori, intento_usuario)
 
-        print("Encertats: {}, Coincidents: {}".format(correctos, coinciden))
+    print("Encertats: {}, Coincidents: {}".format(correctos, coinciden))
 
-        intents += 1
+    intents += 1
 
-        if correctos == 4:
-            print("Felicitats! Has endevinat el codi en {} intents.".format(intents))
-            break
-
-main()
+    if correctos == 4:
+        print("Felicitats! Has endevinat el codi en {} intents.".format(intents))
+        break

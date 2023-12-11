@@ -14,12 +14,11 @@ def rima(paraula_1, paraula_2):
     else:
         return "No rimen"
 
-def programa_principal():
-    print("Introdueix dues paraules per comprovar si rimen:")
-    paraula_1 = input("Paraula 1: ")
-    paraula_2 = input("Paraula 2: ")
+#Programa Principal
+print("Introdueix dues paraules per comprovar si rimen:")
+paraula_1 = input("Paraula 1: ")
+paraula_2 = input("Paraula 2: ")
 
-    resultat = rima(paraula_1, paraula_2)
-    print(resultat)
+resultat = rima(paraula_1, paraula_2)
+print(resultat)
 
-programa_principal()
