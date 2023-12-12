@@ -1,10 +1,10 @@
 def esta_ordenada(a):
-    ascendente = sorted(a) == a
-    descendente = sorted(a, reverse = True) == a
+    ascendent = sorted(a) == a
+    descendent = sorted(a, reverse = True) == a
 
-    if ascendente:
+    if ascendent:
         print("La llista {} està ordenada ascendentment".format(a))
-    elif descendente:
+    elif descendent:
         print("La llista {} està ordenada descendentment".format(a))
     else:
         print("La llista {} no està ordenada".format(a))
