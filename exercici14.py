@@ -1,5 +1,5 @@
 # Definir una funció gran_de_tres(), donats tres números, retorni el major.
-def gran_tres(x,y,z):
+def gran_tres(x,y,z): # Definició de la funció
     if x>y>z:
         print("El nombre més gran és {}".format(x))
     elif x>z>y:
@@ -25,8 +25,9 @@ def gran_tres(x,y,z):
     elif x==y>z:
         print("El nombre més gran és {}".format(x))
 
+# Introduir els 3 nombres a comparar
 x = int(input("Introdueix el primer nombre: "))
 y = int(input("Introdueix el segon nombre: "))
 z = int(input("Introdueix el tercer nombre: "))
 
-gran_tres(x,y,z)
+gran_tres(x,y,z) # Cridar la funció
