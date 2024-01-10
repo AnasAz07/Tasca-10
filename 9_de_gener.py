@@ -89,6 +89,7 @@ def contar_inicials():
 #PPrincipal
 contar_inicials()
 '''
+''''
 def contar_inicials():
     n = []
     a = input("Introdueix una frase: ")
@@ -99,3 +100,7 @@ def contar_inicials():
 
 #PPrincipal
 contar_inicials()
+'''
+
+
+
